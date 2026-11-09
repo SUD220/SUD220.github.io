@@ -144,19 +144,19 @@ const work=[
 ];
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-// ADD YOUR PHOTOS HERE. Use paths such as 'images/nutty-affair.jpg'.
+// ADD YOUR PHOTOS HERE. Use paths such as 'images/nutty-affair.png'.
 // Keep the images folder beside index.html, or use full HTTPS image URLs.
 // To keep everything in one file, paste data:image/...;base64,... strings instead.
 const projectImages = {
- 'nutty-affair': '',
- 'lukka-chuppi': '',
- 'kalabazaar': '',
- 'ory': '',
- 'security': '',
- 'paid-media': '',
- 'content': '',
- 'growth': '',
- 'automation': '',
+ 'nutty-affair': 'images/nutty-affair.png',
+ 'lukka-chuppi': 'images/lukka-chuppi.png',
+ 'kalabazaar': 'images/kalabazar.png',
+ 'ory': 'images/ory-folded-dreams.png',
+ 'security': 'images/security.jpg',
+ 'paid-media': 'images/google-ads.png',
+ 'content': 'images/content.jpg',
+ 'growth': 'images/growth.png',
+ 'automation': 'images/automation.png',
  'next': ''
 };
 function artwork(item,suffix){
@@ -283,7 +283,7 @@ async function copyText(text,field){try{if(!navigator.clipboard)throw new Error(
 $('copy-email').addEventListener('click',()=>copyText('sudarshanyadav719@gmail.com'));
 $('copy-draft').addEventListener('click',()=>copyText($('email-draft').value,$('email-draft')));
 // YOUR PROFILE PHOTO: set a path or data URL. Leave empty to show the photo slot.
-const profileImage = ''; // Example: 'images/sudarshan.jpg'
+const profileImage = 'images/image.jpg'; // Example: 'images/sudarshan.jpg'
 if(profileImage){
  const photo=document.createElement('img');photo.className='profile-photo';photo.alt='Sudarshan Yadav';
  photo.addEventListener('error',()=>photo.replaceWith(profileFallback));
